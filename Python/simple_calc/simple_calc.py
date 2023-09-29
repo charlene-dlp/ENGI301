@@ -96,15 +96,15 @@ def get_user_input():
     try:
         # NOTE - Use "pass" statements to allow code to be run without having to 
         # NOTE - fill out the contents.  This pass statement should be removed    
-        num = input("Enter first number:")
-        num = input("Enter second number:")
+        num1 = input("Enter first number:")
+        num2 = input("Enter second number:")
         func = input("Enter function     :")
         return(num1,num2,func)
         
         # NOTE - User input is generally returned as a string and must be translated.
     except:
-        print("Invalid Input")
-        return (None, None, None)
+      print("Invalid Input")
+      return (None, None, None)
 
 # End def
 
@@ -132,9 +132,9 @@ if __name__ == "__main__":
 
     # NOTE - Use "pass" statements to allow code to be run without having to 
     # NOTE - fill out the contents.  This pass statement should be removed 
-    get_user_input();  
     while True:
         (num1,num2,func) = get_user_input()
+        
         if (num1 == None) or (num2 == None) or (func == None):
             print("Invalid Input!")
             break
