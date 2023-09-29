@@ -69,14 +69,14 @@ import operator as op
 
 # NOTE - Global variable to map an operator string (e.g. "+") to 
 # NOTE - the appropriate function.
-operators = {"+": op.add(),
-             "-":op.sub(),
-             "*":op.mul(),
-             "/":op.truediv(),
-             ">>":op.rshift(),
-             "<<":op.lshift(),
-             "**":op.pow(),
-             "%":op.mod()
+operators = {"+": op.add,
+             "-":op.sub,
+             "*":op.mul,
+             "/":op.truediv,
+             ">>":op.rshift,
+             "<<":op.lshift,
+             "**":op.pow,
+             "%":op.mod
     # Dictionary syntax:  "key" : "value"
     #   i.e. "function" : operator.<function>
 }
