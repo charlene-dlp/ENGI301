@@ -98,7 +98,7 @@ def get_user_input():
         # NOTE - fill out the contents.  This pass statement should be removed    
         num = input("Enter first number:")
         num = input("Enter second number:")
-        num = input("Enter function     :")
+        func = input("Enter function     :")
         return(num1,num2,func)
         
         # NOTE - User input is generally returned as a string and must be translated.
