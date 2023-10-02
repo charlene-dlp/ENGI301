@@ -96,10 +96,15 @@ def get_user_input():
     try:
         # NOTE - Use "pass" statements to allow code to be run without having to 
         # NOTE - fill out the contents.  This pass statement should be removed    
-        num1 = input("Enter first number:")
-        num2 = input("Enter second number:")
+        num1 = float(input("Enter first number:"))
+        num2 = float(input("Enter second number:"))
         func = input("Enter function     :")
-        return(num1,num2,func)
+        op1 = operators[func]
+        if op1 == operators["%"] or op1 == operators["<<"] or op1 == operators[">>"]:
+            num1 = int(num1)
+            num2 = int(num2)
+
+        return(num1,num2,op1)
         
         # NOTE - User input is generally returned as a string and must be translated.
     except:
@@ -134,9 +139,8 @@ if __name__ == "__main__":
     # NOTE - fill out the contents.  This pass statement should be removed 
     while True:
         (num1,num2,func) = get_user_input()
-        
         if (num1 == None) or (num2 == None) or (func == None):
             print("Invalid Input!")
             break
-    print(func(num1,num2))
+        print("Result: {0}".format(func(num1,num2)))
 
